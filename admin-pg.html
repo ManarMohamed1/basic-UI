@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        
+        <!-- meta for mobs -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        
+        <!--internet explorer-->
+        <meta http-equiv="x-uacompataple" content="IE=edge">
+        
+        <!--[if lt IE 9]>
+        <script src="js/html5shiv.js"></script>
+        <script src="js/respond.min.js"></script>
+         <![endif]-->
+
+        <title>form</title>
+        
+        <!--bootstrap-->
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/bootstrap_copy.css">
+
+        <!--Date picker-->
+        <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+        
+        <!--my style-->
+        <style>
+            body {
+                overflow-x: hidden;
+                }
+
+                #sidebar-wrapper {
+                min-height: 100vh;
+                margin-left: -15rem;
+                -webkit-transition: margin .25s ease-out;
+                -moz-transition: margin .25s ease-out;
+                -o-transition: margin .25s ease-out;
+                transition: margin .25s ease-out;
+                }
+
+                #sidebar-wrapper .sidebar-heading {
+                padding: 0.875rem 1.25rem;
+                font-size: 1.2rem;
+                }
+
+                #sidebar-wrapper .list-group {
+                width: 15rem;
+                }
+
+                #page-content-wrapper {
+                min-width: 100vw;
+                }
+
+                #wrapper.toggled #sidebar-wrapper {
+                margin-left: 0;
+                }
+
+                @media (min-width: 768px) {
+                #sidebar-wrapper {
+                    margin-left: 0;
+                }
+
+                #page-content-wrapper {
+                    min-width: 0;
+                    width: 100%;
+                }
+
+                #wrapper.toggled #sidebar-wrapper {
+                    margin-left: -15rem;
+                }
+                }
+        </style>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+            <div class='container'>
+                <a class="navbar-brand" href="#">LOGO</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <form class="form-inline my-2 my-lg-0 ml-auto">
+                        <button class="btn btn-outline-success my-2 my-sm-0 m-2" >Register</button>
+                        <button class="btn btn-outline-success my-2 my-sm-0" >Login</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+        <div class="d-flex" id="wrapper">
+
+            <!-- Sidebar -->
+            <div class="bg-light border-right shadow-sm" id="sidebar-wrapper">
+              <div class="sidebar-heading"><b>Dashboard</b> </div>
+              <div class="list-group list-group-flush">
+                <a href="#" class="list-group-item list-group-item-action bg-light">Jobs</a>
+                <a href="#" class="list-group-item list-group-item-action bg-light">Applications</a>
+              </div>
+            </div>
+            <!-- /#sidebar-wrapper -->
+        
+            <!-- Page Content -->
+            <div id="page-content-wrapper">
+        
+              <div class="container">
+                <button type="button" class="btn btn-success float-right m-3" data-toggle="modal" data-target="#exampleModal">Create New Job</button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Job Form</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="form-group">
+                                    <label for="exampleFormControlInput1">Job Title</label>
+                                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="example: Junior UI/UX Designer & Developer">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleFormControlInput1">Required Experience Level</label>
+                                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="example: 1+ years of working experience">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleFormControlTextarea1">Job Breif</label>
+                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleFormControlInput1">Job Start Date</label>
+                                    <input id="datepicker1">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleFormControlInput1">Job End Date</label>
+                                    <input id="datepicker2">
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-success">Post Job</button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+              </div>
+            <!-- /#page-content-wrapper -->
+        
+          </div>
+    
+    <!-- Include js plugin --> 
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <!--Datepicker-->
+        <script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
+
+        <script>
+            $('#datepicker1').datepicker({
+                uiLibrary: 'bootstrap4'
+            });
+            $('#datepicker2').datepicker({
+                uiLibrary: 'bootstrap4'
+            });
+        </script>
+        
+    </body>
+</html>
